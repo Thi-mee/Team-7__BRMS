@@ -1,0 +1,61 @@
+name: Build and Test
+
+on:
+  push:
+    branches:
+      - dev
+  pull_request:
+    branches:
+      - dev
+  workflow_dispatch:
+    
+
+jobs:
+  build-and-test-frontend:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+
+      - name: Install dependencies
+        run: |
+          cd frontendclient
+          npm ci
+
+      - name: Build frontend
+        run: |
+          cd frontendclient
+          npm run build
+
+      - name: Run frontend tests
+        run: |
+          cd frontendclient
+          npm test
+
+  build-and-test-backend:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Install dependencies
+        run: |
+          cd 'Backend Client'
+          npm ci
+
+      - name: Run backend tests
+        run: |
+          cd 'Backend Client'
+          npm test
