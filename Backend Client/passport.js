@@ -27,8 +27,6 @@ function initialize(passport) {
   });
 
 
-
-
   // This is the login strategy
   passport.use('local', new LocalStrategy(
     { passReqToCallback: true, usernameField: 'email', passwordField: 'password' },
