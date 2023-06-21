@@ -1,20 +1,15 @@
 .container{
     display: flex;
-    /* align-items: center; */
-    /* justify-content: center; */
     height: 99.8vh;
-    /* border: 1px solid red; */
-    /* width: 100%; */
 }
 
 .first_half{
-    /* border: 1px solid green; */
     width: 50%;
     padding: 1em;
 }
 
 .second_half{
-    background-color: #D36500;
+    background-color: var(--main-color);
     width: 50%;
     color: #fff;
     padding: 3em;
@@ -38,7 +33,6 @@
 .flex_input{
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     justify-content: center;
     margin-top: 5em;
 }
@@ -75,7 +69,7 @@
     padding: .8em;
     margin-top: 3em;
     width: 84%;
-    background-color: #343434;
+    background-color: var(--secondary-color);
     border: none;
     border-radius: 10px;
     font-family: 'Poppins';
@@ -85,13 +79,12 @@
 }
 
 .login_btn:hover{
-    background-color: #171717;
+    background-color: var(--hover-color);
 }
 
 .eye_icon{
     color: black;
     margin-left: -2.5em;
     font-size: 1.1rem;
-    /* margin-top: 1em; */
     cursor: pointer;
 }

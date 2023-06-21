@@ -6,3 +6,10 @@ body{
   box-sizing: border-box;
   font-family: "Poppins";
 }
+
+:root{
+  --main-color: #D36500;
+  --secondary-color: #343434;
+  --hover-color: #171717;
+  --text-color: #fff;
+}

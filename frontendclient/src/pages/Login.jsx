@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
-import style from "../../../styles/Login.module.css";
-import tcnlogo from "../../../utils/App/IKORODU_1_-removebg-preview-cropped.png";
-import orange_bus from "../../../utils/App/orange_bus-removebg-preview.png"
+import style from "../styles/Auth.module.css";
+// import tcnlogo from "/assets/IKORODU_1_-removebg-preview-cropped.png";
+// import orange_bus from "/assets/orange_bus-removebg-preview.png"
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
@@ -12,8 +12,8 @@ const Login = () => {
     <>
       <div className={style.container}>
         <div className={style.first_half}>
-          <img src={tcnlogo} alt="Church Logo" />
-          <img src={orange_bus} alt="Church Bus" className={style.church_bus}/>
+          <img src="/assets/TCN_logo.png" alt="Church Logo" />
+          <img src="/assets/orange_bus" alt="Church Bus" className={style.church_bus}/>
         </div>
         <div className={style.second_half}>
           <h1 className={style.text}>Login</h1>
