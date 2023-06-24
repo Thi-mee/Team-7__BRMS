@@ -1,0 +1,99 @@
+.notepage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+    min-height: 100vh;
+    background-color: #f1f1f1;
+}
+
+.notes {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 100%;
+}
+
+.note {
+    display: flex;
+    gap: 1em;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.note .status {
+    width: 1.5rem;
+    position: relative;
+}
+
+.note .status::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 1rem;
+    height: 1rem;
+    margin: auto;
+    border-radius: 50%;
+    background-color: #f18f8f;
+}
+
+.note .status.done::before{
+    background-color: #8ff18f;
+}
+
+.note .status.pending::before{
+    background-color: #f1f18f;
+}
+
+.note .status.inprogress::before{
+    background-color: #8f8ff1;
+}
+
+.note .content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    flex: 1 1 auto;
+}
+
+.note .content h3,
+.note .content p {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.note .content h3 {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.note .content p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.note .moreBtn {
+    border: none;
+    background-color: transparent;
+    color: rgb(72, 72, 248);
+}
+
+
+
+
+.ctab {
+    position: fixed;
+    bottom: 1.2em;
+    right: 1.2em;
+    background-color: rgb(72, 72, 248);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5em;
+    border-radius: 50%;
+}
